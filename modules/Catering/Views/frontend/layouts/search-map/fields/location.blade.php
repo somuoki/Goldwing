@@ -1,4 +1,4 @@
-@php($location_search_style = setting_item('car_location_search_style'))
+@php($location_search_style = setting_item('catering_location_search_style'))
 
 <div class="filter-item">
     <div class="form-group">
@@ -35,7 +35,7 @@
                 ?>
                 <div class="smart-search">
                     <input type="text" class="smart-search-location parent_text form-control"
-                           {{ ( empty(setting_item("car_location_search_style")) or setting_item("car_location_search_style") == "normal" ) ? "readonly" : ""  }} placeholder="{{__("Where are you going?")}}"
+                           {{ ( empty(setting_item("catering_location_search_style")) or setting_item("catering_location_search_style") == "normal" ) ? "readonly" : ""  }} placeholder="{{__("Where are you going?")}}"
                            value="{{ $location_name }}" data-onLoad="{{__("Loading...")}}"
                            data-default="{{ json_encode($list_json) }}">
                     <input type="hidden" class="child_id" name="location_id" value="{{Request::query('location_id')}}">

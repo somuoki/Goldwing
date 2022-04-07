@@ -1,4 +1,4 @@
-@php($location_search_style = setting_item('car_location_search_style'))
+@php($location_search_style = setting_item('catering_location_search_style'))
 <div class="form-group">
     <i class="field-icon fa icofont-map"></i>
     <div class="form-content">
@@ -10,7 +10,7 @@
                 <input type="hidden" name="map_lat" value="{{request()->input('map_lat')}}">
                 <input type="hidden" name="map_lgn" value="{{request()->input('map_lgn')}}">
             </div>
-    
+
         @else
         <?php
         $location_name = "";
@@ -31,7 +31,7 @@
         $traverse($list_location);
         ?>
         <div class="smart-search">
-            <input type="text" class="smart-search-location parent_text form-control" {{ ( empty(setting_item("car_location_search_style")) or setting_item("car_location_search_style") == "normal" ) ? "readonly" : ""  }} placeholder="{{__("Where are you going?")}}" value="{{ $location_name }}" data-onLoad="{{__("Loading...")}}"
+            <input type="text" class="smart-search-location parent_text form-control" {{ ( empty(setting_item("catering_location_search_style")) or setting_item("catering_location_search_style") == "normal" ) ? "readonly" : ""  }} placeholder="{{__("Where are you going?")}}" value="{{ $location_name }}" data-onLoad="{{__("Loading...")}}"
                    data-default="{{ json_encode($list_json) }}">
             <input type="hidden" class="child_id" name="location_id" value="{{Request::query('location_id')}}">
         </div>
